@@ -2,34 +2,32 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',  // Entry point for the app
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './' // This makes all paths relative to index.html
-  
-  
+    publicPath: '/' // Changed from './' to '/' for SPA routing
   },
   
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,  // Handle JS and JSX files
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
       {
-        test: /\.css$/,  // Handle CSS files
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,  // Handle image files (PNG, JPG, GIF, SVG)
+        test: /\.(png|jpg|gif|svg)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[hash].[ext]',  // Output filename format
-              outputPath: 'images',  // Output directory for images
+              name: '[name].[hash].[ext]',
+              outputPath: 'images',
             },
           },
         ],
@@ -37,16 +35,18 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],  // Resolve JS and JSX files without specifying extensions
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',  // Template file for the HTML
+      template: './index.html',
+      filename: 'index.html',
     }),
   ],
   devServer: {
-    static: path.join(__dirname, 'dist'),  // Static files to serve
-    port: 3008,  // Development server port
-    historyApiFallback: true,  // Fallback to index.html for Single Page Applications (SPA)
+    static: path.join(__dirname, 'dist'),
+    port: 3008,
+    historyApiFallback: true,
   },
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 };
