@@ -1,0 +1,141 @@
+nav > img {
+    width: 82px; /* Adjust to match Airbnb's exact logo size */
+    height: auto;
+    margin: auto 0;
+
+}
+nav {
+    display: flex;
+    justify-content: flex-start; /* Align logo to the left */
+    width: 480px;
+    height: 70px;
+    background-color: #faf4f4;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    padding: 0 36px; /* Add padding to match the content padding */
+}
+
+nav > img {
+    width: 100px;
+    height: auto;
+    margin: auto 0; /* Center vertically only */
+    padding: 0; /* Remove any padding */
+}
+body {
+    background-color: rgb(230, 220, 206);
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; 
+    scale: 0.5;
+}
+section {
+   
+     background-color: #faf4f4;
+     width: 550px;
+     height: 753px;
+     margin-top: 1px;
+     display: flex;
+     flex-direction: column;
+}
+
+section h1 {
+    font-family: Poppins, sans-serif;
+    width: 587px;
+    height: 35px;
+    margin-top: 60px;
+    margin-left: 36px;
+font-size: 32px;
+font-weight: 600;
+line-height: 3.6px;
+
+
+    
+}
+section p {
+    font-family: Arial, Helvetica, sans-serif ;
+width: 350px;
+margin-top: -18px;
+height: 71px;
+margin-left: 36px;
+font-size: 16px;
+font-weight: 300;
+line-height: 17.6px;
+text-align: left;
+
+
+}
+.air {
+    width: 350px; 
+    height: auto; 
+    display: block;
+    margin: 0px auto;
+    padding-top: 30px;
+}
+.wrap {
+    display: flex;
+    margin-top: 20px;
+    gap: 18px;
+    padding: 0 36px;
+}
+
+.card {
+    flex: 1;
+    max-width: 188px;
+    position: relative;
+    margin-top: -350px;
+    margin-left: -1px;
+}
+
+.card-image {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.card p {
+    margin: 8px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.badge.sold-out {
+    background-color: #ff385c;
+    color: white;
+}
+
+.badge.online {
+    background-color: #34c759;
+    color: white;
+}
+
+.rating {
+    color: #ff385c;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.per-person {
+    font-weight: normal;
+    color: #777;
+}
