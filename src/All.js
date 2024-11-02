@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Sec from "./Sec";
 import "./index.css";  
-import Card from "./card";
+import Card from "./Card";
 
 export default function All() {
     return(
